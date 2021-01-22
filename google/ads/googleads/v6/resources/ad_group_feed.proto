@@ -53,7 +53,7 @@ message AdGroupFeed {
   ];
 
   // Immutable. The feed being linked to the ad group.
-  optional string feed = 7 [
+    string feed = 7 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Feed"
@@ -61,7 +61,7 @@ message AdGroupFeed {
   ];
 
   // Immutable. The ad group being linked to the feed.
-  optional string ad_group = 8 [
+    string ad_group = 8 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/AdGroup"

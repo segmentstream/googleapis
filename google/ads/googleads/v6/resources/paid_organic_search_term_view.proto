@@ -52,5 +52,5 @@ message PaidOrganicSearchTermView {
   ];
 
   // Output only. The search term.
-  optional string search_term = 3 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string search_term = 3 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

@@ -52,11 +52,11 @@ message CustomerLabel {
 
   // Output only. The resource name of the customer to which the label is attached.
   // Read only.
-  optional string customer = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string customer = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The resource name of the label assigned to the customer.
   //
   // Note: the Customer ID portion of the label resource name is not
   // validated when creating a new CustomerLabel.
-  optional string label = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string label = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

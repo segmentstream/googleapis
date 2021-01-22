@@ -46,26 +46,26 @@ message BatchJob {
   message BatchJobMetadata {
     // Output only. The time when this batch job was created.
     // Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
-    optional string creation_date_time = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+      string creation_date_time = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 
     // Output only. The time when this batch job started running.
     // Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
-    optional string start_date_time = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+      string start_date_time = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 
     // Output only. The time when this batch job was completed.
     // Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
-    optional string completion_date_time = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
+      string completion_date_time = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
 
     // Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
     // This is empty if the job hasn't started running yet.
-    optional double estimated_completion_ratio = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
+      double estimated_completion_ratio = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
 
     // Output only. The number of mutate operations in the batch job.
-    optional int64 operation_count = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
+      int64 operation_count = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
 
     // Output only. The number of mutate operations executed by the batch job.
     // Present only if the job has started running.
-    optional int64 executed_operation_count = 12 [(google.api.field_behavior) = OUTPUT_ONLY];
+      int64 executed_operation_count = 12 [(google.api.field_behavior) = OUTPUT_ONLY];
   }
 
   // Immutable. The resource name of the batch job.
@@ -80,11 +80,11 @@ message BatchJob {
   ];
 
   // Output only. ID of this batch job.
-  optional int64 id = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 id = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The next sequence token to use when adding operations. Only set when the
   // batch job status is PENDING.
-  optional string next_add_sequence_token = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string next_add_sequence_token = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Contains additional information about this batch job.
   BatchJobMetadata metadata = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
@@ -94,5 +94,5 @@ message BatchJob {
 
   // Output only. The resource name of the long-running operation that can be used to poll
   // for completion. Only set when the batch job status is RUNNING or DONE.
-  optional string long_running_operation = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string long_running_operation = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

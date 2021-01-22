@@ -50,14 +50,14 @@ message Video {
   ];
 
   // Output only. The ID of the video.
-  optional string id = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string id = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The owner channel id of the video.
-  optional string channel_id = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string channel_id = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The duration of the video in milliseconds.
-  optional int64 duration_millis = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 duration_millis = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The title of the video.
-  optional string title = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string title = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

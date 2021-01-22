@@ -52,14 +52,14 @@ message GroupPlacementView {
 
   // Output only. The automatic placement string at group level, e. g. web domain, mobile
   // app ID, or a YouTube channel ID.
-  optional string placement = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string placement = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Domain name for websites and YouTube channel name for YouTube channels.
-  optional string display_name = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string display_name = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. URL of the group placement, e.g. domain, link to the mobile application in
   // app store, or a YouTube channel URL.
-  optional string target_url = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string target_url = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Type of the placement, e.g. Website, YouTube Channel, Mobile Application.
   google.ads.googleads.v6.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(google.api.field_behavior) = OUTPUT_ONLY];

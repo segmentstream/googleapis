@@ -53,7 +53,7 @@ message CampaignFeed {
   ];
 
   // Immutable. The feed to which the CampaignFeed belongs.
-  optional string feed = 7 [
+    string feed = 7 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Feed"
@@ -61,7 +61,7 @@ message CampaignFeed {
   ];
 
   // Immutable. The campaign to which the CampaignFeed belongs.
-  optional string campaign = 8 [
+    string campaign = 8 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Campaign"

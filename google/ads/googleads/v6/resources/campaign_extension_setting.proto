@@ -59,7 +59,7 @@ message CampaignExtensionSetting {
   // Campaign resource names have the form:
   //
   // `customers/{customer_id}/campaigns/{campaign_id}`
-  optional string campaign = 6 [
+    string campaign = 6 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Campaign"

@@ -55,13 +55,13 @@ message ProductBiddingCategoryConstant {
   //
   // This ID is equivalent to the google_product_category ID as described in
   // this article: https://support.google.com/merchants/answer/6324436.
-  optional int64 id = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 id = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Two-letter upper-case country code of the product bidding category.
-  optional string country_code = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string country_code = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Resource name of the parent product bidding category.
-  optional string product_bidding_category_constant_parent = 12 [
+    string product_bidding_category_constant_parent = 12 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/ProductBiddingCategoryConstant"
@@ -75,9 +75,9 @@ message ProductBiddingCategoryConstant {
   google.ads.googleads.v6.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Language code of the product bidding category.
-  optional string language_code = 13 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string language_code = 13 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Display value of the product bidding category localized according to
   // language_code.
-  optional string localized_name = 14 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string localized_name = 14 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

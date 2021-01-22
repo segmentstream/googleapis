@@ -49,7 +49,7 @@ message CampaignLabel {
   ];
 
   // Immutable. The campaign to which the label is attached.
-  optional string campaign = 4 [
+    string campaign = 4 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Campaign"
@@ -57,7 +57,7 @@ message CampaignLabel {
   ];
 
   // Immutable. The label assigned to the campaign.
-  optional string label = 5 [
+    string label = 5 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Label"

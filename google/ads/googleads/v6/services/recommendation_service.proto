@@ -104,7 +104,7 @@ message ApplyRecommendationOperation {
   message CampaignBudgetParameters {
     // New budget amount to set for target budget resource. This is a required
     // field.
-    optional int64 new_budget_amount_micros = 2;
+      int64 new_budget_amount_micros = 2;
   }
 
   // Parameters to use when applying a text ad recommendation.
@@ -117,24 +117,24 @@ message ApplyRecommendationOperation {
   // Parameters to use when applying keyword recommendation.
   message KeywordParameters {
     // The ad group resource to add keyword to. This is a required field.
-    optional string ad_group = 4;
+      string ad_group = 4;
 
     // The match type of the keyword. This is a required field.
     google.ads.googleads.v6.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;
 
     // Optional, CPC bid to set for the keyword. If not set, keyword will use
     // bid based on bidding strategy used by target ad group.
-    optional int64 cpc_bid_micros = 5;
+      int64 cpc_bid_micros = 5;
   }
 
   // Parameters to use when applying Target CPA recommendation.
   message TargetCpaOptInParameters {
     // Average CPA to use for Target CPA bidding strategy. This is a required
     // field.
-    optional int64 target_cpa_micros = 3;
+      int64 target_cpa_micros = 3;
 
     // Optional, budget amount to set for the campaign.
-    optional int64 new_campaign_budget_amount_micros = 4;
+      int64 new_campaign_budget_amount_micros = 4;
   }
 
   // Parameters to use when applying a Target ROAS opt-in recommendation.
@@ -142,10 +142,10 @@ message ApplyRecommendationOperation {
     // Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
     // strategy. The value is between 0.01 and 1000.0, inclusive. This is a
     // required field.
-    optional double target_roas = 1;
+      double target_roas = 1;
 
     // Optional, budget amount to set for the campaign.
-    optional int64 new_campaign_budget_amount_micros = 2;
+      int64 new_campaign_budget_amount_micros = 2;
   }
 
   // Parameters to use when applying callout extension recommendation.
@@ -170,7 +170,7 @@ message ApplyRecommendationOperation {
   message MoveUnusedBudgetParameters {
     // Budget amount to move from excess budget to constrained budget. This is
     // a required field.
-    optional int64 budget_micros_to_move = 2;
+      int64 budget_micros_to_move = 2;
   }
 
   // The resource name of the recommendation to apply.

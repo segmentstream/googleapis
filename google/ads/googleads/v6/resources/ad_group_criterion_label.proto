@@ -49,7 +49,7 @@ message AdGroupCriterionLabel {
   ];
 
   // Immutable. The ad group criterion to which the label is attached.
-  optional string ad_group_criterion = 4 [
+    string ad_group_criterion = 4 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/AdGroupCriterion"
@@ -57,7 +57,7 @@ message AdGroupCriterionLabel {
   ];
 
   // Immutable. The label assigned to the ad group criterion.
-  optional string label = 5 [
+    string label = 5 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Label"

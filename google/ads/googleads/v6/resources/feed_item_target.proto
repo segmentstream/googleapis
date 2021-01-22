@@ -53,7 +53,7 @@ message FeedItemTarget {
   ];
 
   // Immutable. The feed item to which this feed item target belongs.
-  optional string feed_item = 12 [
+    string feed_item = 12 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/FeedItem"
@@ -64,7 +64,7 @@ message FeedItemTarget {
   google.ads.googleads.v6.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The ID of the targeted resource. This field is read-only.
-  optional int64 feed_item_target_id = 13 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 feed_item_target_id = 13 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Status of the feed item target.
   // This field is read-only.

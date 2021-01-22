@@ -62,7 +62,7 @@ message FeedItem {
   ];
 
   // Immutable. The feed to which this feed item belongs.
-  optional string feed = 11 [
+    string feed = 11 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Feed"
@@ -70,19 +70,19 @@ message FeedItem {
   ];
 
   // Output only. The ID of this feed item.
-  optional int64 id = 12 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 id = 12 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Start time in which this feed item is effective and can begin serving. The
   // time is in the customer's time zone.
   // The format is "YYYY-MM-DD HH:MM:SS".
   // Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
-  optional string start_date_time = 13;
+    string start_date_time = 13;
 
   // End time in which this feed item is no longer effective and will stop
   // serving. The time is in the customer's time zone.
   // The format is "YYYY-MM-DD HH:MM:SS".
   // Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
-  optional string end_date_time = 14;
+    string end_date_time = 14;
 
   // The feed item's attribute values.
   repeated FeedItemAttributeValue attribute_values = 6;
@@ -111,26 +111,26 @@ message FeedItem {
 // A feed item attribute value.
 message FeedItemAttributeValue {
   // Id of the feed attribute for which the value is associated with.
-  optional int64 feed_attribute_id = 11;
+    int64 feed_attribute_id = 11;
 
   // Int64 value. Should be set if feed_attribute_id refers to a feed attribute
   // of type INT64.
-  optional int64 integer_value = 12;
+    int64 integer_value = 12;
 
   // Bool value. Should be set if feed_attribute_id refers to a feed attribute
   // of type BOOLEAN.
-  optional bool boolean_value = 13;
+    bool boolean_value = 13;
 
   // String value. Should be set if feed_attribute_id refers to a feed attribute
   // of type STRING, URL or DATE_TIME.
   // For STRING the maximum length is 1500 characters. For URL the maximum
   // length is 2076 characters. For DATE_TIME the string must be in the format
   // "YYYYMMDD HHMMSS".
-  optional string string_value = 14;
+    string string_value = 14;
 
   // Double value. Should be set if feed_attribute_id refers to a feed attribute
   // of type DOUBLE.
-  optional double double_value = 15;
+    double double_value = 15;
 
   // Price value. Should be set if feed_attribute_id refers to a feed attribute
   // of type PRICE.
@@ -167,7 +167,7 @@ message FeedItemPlaceholderPolicyInfo {
   google.ads.googleads.v6.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The FeedMapping that contains the placeholder type.
-  optional string feed_mapping_resource_name = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string feed_mapping_resource_name = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Where the placeholder type is in the review process.
   google.ads.googleads.v6.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(google.api.field_behavior) = OUTPUT_ONLY];
@@ -200,7 +200,7 @@ message FeedItemValidationError {
   google.ads.googleads.v6.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The description of the validation error.
-  optional string description = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string description = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Set of feed attributes in the feed item flagged during validation. If
   // empty, no specific feed attributes can be associated with the error
@@ -210,5 +210,5 @@ message FeedItemValidationError {
   // Output only. Any extra information related to this error which is not captured by
   // validation_error and feed_attribute_id (e.g. placeholder field IDs when
   // feed_attribute_id is not mapped). Note that extra_info is not localized.
-  optional string extra_info = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string extra_info = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

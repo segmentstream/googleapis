@@ -55,10 +55,10 @@ message CampaignExperiment {
   // Output only. The ID of the campaign experiment.
   //
   // This field is read-only.
-  optional int64 id = 13 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 id = 13 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Immutable. The campaign draft with staged changes to the base campaign.
-  optional string campaign_draft = 14 [
+    string campaign_draft = 14 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/CampaignDraft"
@@ -73,21 +73,21 @@ message CampaignExperiment {
   //
   // It must not contain any null (code point 0x0), NL line feed
   // (code point 0xA) or carriage return (code point 0xD) characters.
-  optional string name = 15;
+    string name = 15;
 
   // The description of the experiment.
-  optional string description = 16;
+    string description = 16;
 
   // Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
   // 99 inclusive. Base campaign receives the remainder of the traffic
   // (100 - traffic_split_percent). Required for create.
-  optional int64 traffic_split_percent = 17 [(google.api.field_behavior) = IMMUTABLE];
+    int64 traffic_split_percent = 17 [(google.api.field_behavior) = IMMUTABLE];
 
   // Immutable. Determines the behavior of the traffic split.
   google.ads.googleads.v6.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(google.api.field_behavior) = IMMUTABLE];
 
   // Output only. The experiment campaign, as opposed to the base campaign.
-  optional string experiment_campaign = 18 [
+    string experiment_campaign = 18 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Campaign"
@@ -100,7 +100,7 @@ message CampaignExperiment {
   // Output only. The resource name of the long-running operation that can be used to poll
   // for completion of experiment create or promote. The most recent long
   // running operation is returned.
-  optional string long_running_operation = 19 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string long_running_operation = 19 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Date when the campaign experiment starts. By default, the experiment starts
   // now or on the campaign's start date, whichever is later. If this field is
@@ -109,7 +109,7 @@ message CampaignExperiment {
   //
   // Format: YYYY-MM-DD
   // Example: 2019-03-14
-  optional string start_date = 20;
+    string start_date = 20;
 
   // Date when the campaign experiment ends. By default, the experiment ends on
   // the campaign's end date. If this field is set, then the experiment ends at
@@ -117,5 +117,5 @@ message CampaignExperiment {
   //
   // Format: YYYY-MM-DD
   // Example: 2019-04-18
-  optional string end_date = 21;
+    string end_date = 21;
 }

@@ -52,7 +52,7 @@ message MatchingFunction {
   // function (whitespace and single versus double quotation marks, for
   // example), the value returned may not be identical to the string sent in a
   // mutate request.
-  optional string function_string = 5;
+    string function_string = 5;
 
   // Operator for a function.
   google.ads.googleads.v6.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator operator = 4;
@@ -89,10 +89,10 @@ message Operand {
   // Used to represent a feed attribute in feed.
   message FeedAttributeOperand {
     // The associated feed. Required.
-    optional int64 feed_id = 3;
+      int64 feed_id = 3;
 
     // Id of the referenced feed attribute. Required.
-    optional int64 feed_attribute_id = 4;
+      int64 feed_attribute_id = 4;
   }
 
   // A function operand in a matching function.

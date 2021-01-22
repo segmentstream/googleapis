@@ -55,8 +55,8 @@ message UserLocationView {
   ];
 
   // Output only. Criterion Id for the country.
-  optional int64 country_criterion_id = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 country_criterion_id = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Indicates whether location was targeted or not.
-  optional bool targeting_location = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
+    bool targeting_location = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

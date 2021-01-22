@@ -74,7 +74,7 @@ message FeedMapping {
   ];
 
   // Immutable. The feed of this feed mapping.
-  optional string feed = 7 [
+    string feed = 7 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Feed"
@@ -108,13 +108,13 @@ message FeedMapping {
 // Maps from feed attribute id to a placeholder or criterion field id.
 message AttributeFieldMapping {
   // Immutable. Feed attribute from which to map.
-  optional int64 feed_attribute_id = 24 [(google.api.field_behavior) = IMMUTABLE];
+    int64 feed_attribute_id = 24 [(google.api.field_behavior) = IMMUTABLE];
 
   // Output only. The placeholder field ID. If a placeholder field enum is not published in
   // the current API version, then this field will be populated and the field
   // oneof will be empty.
   // This field is read-only.
-  optional int64 field_id = 25 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 field_id = 25 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Placeholder or criterion field to be populated using data from
   // the above feed attribute. Required.

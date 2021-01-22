@@ -63,7 +63,7 @@ message CriterionCategoryChannelAvailability {
   // advertising_channel_type being DISPLAY and include_default_channel_sub_type
   // being false means that the default display campaign where channel sub type
   // is not set is not included in this availability configuration.
-  optional bool include_default_channel_sub_type = 5;
+    bool include_default_channel_sub_type = 5;
 }
 
 // Information about which locales a category is available in.
@@ -75,8 +75,8 @@ message CriterionCategoryLocaleAvailability {
   google.ads.googleads.v6.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;
 
   // Code of the country.
-  optional string country_code = 4;
+    string country_code = 4;
 
   // Code of the language.
-  optional string language_code = 5;
+    string language_code = 5;
 }

@@ -32,8 +32,8 @@ option ruby_package = "Google::Ads::GoogleAds::V6::Common";
 // Represents a price in a particular currency.
 message Money {
   // Three-character ISO 4217 currency code.
-  optional string currency_code = 3;
+    string currency_code = 3;
 
   // Amount in micros. One million is equivalent to one unit.
-  optional int64 amount_micros = 4;
+    int64 amount_micros = 4;
 }

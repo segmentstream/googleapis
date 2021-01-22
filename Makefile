@@ -31,8 +31,7 @@ $(error Go source files are not generated from this repository. See: https://git
 endif
 
 FLAGS+= --proto_path=.:$(PROTOINCLUDE)
-FLAGS+= --$(LANGUAGE)_out=$(OUTPUT) --grpc_out=$(OUTPUT)
-FLAGS+=	--plugin=protoc-gen-grpc=$(GRPCPLUGIN)
+FLAGS+= --$(LANGUAGE)_out=$(OUTPUT)
 
 SUFFIX:= pb.cc
 

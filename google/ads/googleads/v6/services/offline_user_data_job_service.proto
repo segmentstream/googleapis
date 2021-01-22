@@ -135,7 +135,7 @@ message AddOfflineUserDataJobOperationsRequest {
   ];
 
   // True to enable partial failure for the offline user data job.
-  optional bool enable_partial_failure = 4;
+    bool enable_partial_failure = 4;
 
   // Required. The list of operations to be done.
   repeated OfflineUserDataJobOperation operations = 3 [(google.api.field_behavior) = REQUIRED];

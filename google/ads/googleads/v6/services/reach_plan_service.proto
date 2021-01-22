@@ -103,16 +103,16 @@ message ListPlannableLocationsResponse {
 // a province.
 message PlannableLocation {
   // The location identifier.
-  optional string id = 4;
+    string id = 4;
 
   // The unique location name in english.
-  optional string name = 5;
+    string name = 5;
 
   // The parent country code, not present if location is a country.
   // If present will always be a criterion id: additional information, such as
   // country name are returned both via ListPlannableLocations or directly by
   // accessing GeoTargetConstantService with the criterion id.
-  optional int64 parent_country_id = 6;
+    int64 parent_country_id = 6;
 }
 
 // Request to list available products in a given location.
@@ -132,7 +132,7 @@ message ListPlannableProductsResponse {
 message ProductMetadata {
   // The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
   // To list the available plannable product codes use ListPlannableProducts.
-  optional string plannable_product_code = 4;
+    string plannable_product_code = 4;
 
   // The name associated with the ad product.
   string plannable_product_name = 3;
@@ -185,11 +185,11 @@ message GenerateProductMixIdeasRequest {
 message Preferences {
   // True if ad skippable.
   // If not set, default is any value.
-  optional bool is_skippable = 6;
+    bool is_skippable = 6;
 
   // True if ad start with sound.
   // If not set, default is any value.
-  optional bool starts_with_sound = 7;
+    bool starts_with_sound = 7;
 
   // The length of the ad.
   // If not set, default is any value.
@@ -197,12 +197,12 @@ message Preferences {
 
   // True if ad will only show on the top content.
   // If not set, default is false.
-  optional bool top_content_only = 8;
+    bool top_content_only = 8;
 
   // True if the price guaranteed. The cost of serving the ad is agreed upfront
   // and not subject to an auction.
   // If not set, default is any value.
-  optional bool has_guaranteed_price = 9;
+    bool has_guaranteed_price = 9;
 }
 
 // The suggested product mix.
@@ -216,11 +216,11 @@ message ProductAllocation {
   // Selected product for planning. The product codes returned are within the
   // set of the ones returned by ListPlannableProducts when using the same
   // location id.
-  optional string plannable_product_code = 3;
+    string plannable_product_code = 3;
 
   // The value to be allocated for the suggested product in requested currency.
   // Amount in micros. One million is equivalent to one unit.
-  optional int64 budget_micros = 4;
+    int64 budget_micros = 4;
 }
 
 // Request message for [ReachPlanService.GenerateReachForecast][google.ads.googleads.v6.services.ReachPlanService.GenerateReachForecast].
@@ -230,7 +230,7 @@ message GenerateReachForecastRequest {
 
   // The currency code.
   // Three-character ISO 4217 currency code.
-  optional string currency_code = 9;
+    string currency_code = 9;
 
   // Required. Campaign duration.
   CampaignDuration campaign_duration = 3 [(google.api.field_behavior) = REQUIRED];
@@ -243,7 +243,7 @@ message GenerateReachForecastRequest {
   //
   // This field is deprecated in v4 and will eventually be removed.
   // Please use cookie_frequency_cap_setting instead.
-  optional int32 cookie_frequency_cap = 10;
+    int32 cookie_frequency_cap = 10;
 
   // Desired cookie frequency cap that will be applied to each planned product.
   // This is equivalent to the frequency cap exposed in Google Ads when creating
@@ -258,7 +258,7 @@ message GenerateReachForecastRequest {
   // exposed to the ad) for the reported reach metrics [1-10].
   // This won't affect the targeting, but just the reporting.
   // If not specified, a default of 1 is applied.
-  optional int32 min_effective_frequency = 11;
+    int32 min_effective_frequency = 11;
 
   // The targeting to be applied to all products selected in the product mix.
   //
@@ -290,7 +290,7 @@ message FrequencyCap {
 message Targeting {
   // Required. The ID of the selected location.
   // Plannable locations ID can be obtained from ListPlannableLocations.
-  optional string plannable_location_id = 6;
+    string plannable_location_id = 6;
 
   // Targeted age range.
   // If not specified, targets all age ranges.
@@ -314,7 +314,7 @@ message Targeting {
 // The duration of a planned campaign.
 message CampaignDuration {
   // The duration value in days.
-  optional int32 duration_in_days = 2;
+    int32 duration_in_days = 2;
 }
 
 // A product being planned for reach.
@@ -322,12 +322,12 @@ message PlannedProduct {
   // Required. Selected product for planning.
   // The code associated with the ad product. E.g. Trueview, Bumper
   // To list the available plannable product codes use ListPlannableProducts.
-  optional string plannable_product_code = 3;
+    string plannable_product_code = 3;
 
   // Required. Maximum budget allocation in micros for the selected product.
   // The value is specified in the selected planning currency_code.
   // E.g. 1 000 000$ = 1 000 000 000 000 micros.
-  optional int64 budget_micros = 4;
+    int64 budget_micros = 4;
 }
 
 // Response message containing the generated reach curve.
@@ -363,20 +363,20 @@ message Forecast {
   // Number of unique people reached at least
   // GenerateReachForecastRequest.min_effective_frequency times that exactly
   // matches the Targeting.
-  optional int64 on_target_reach = 5;
+    int64 on_target_reach = 5;
 
   // Total number of unique people reached at least
   // GenerateReachForecastRequest.min_effective_frequency times. This includes
   // people that may fall outside the specified Targeting.
-  optional int64 total_reach = 6;
+    int64 total_reach = 6;
 
   // Number of ad impressions that exactly matches the Targeting.
-  optional int64 on_target_impressions = 7;
+    int64 on_target_impressions = 7;
 
   // Total number of ad impressions. This includes impressions that may fall
   // outside the specified Targeting, due to insufficient information on
   // signed-in users.
-  optional int64 total_impressions = 8;
+    int64 total_impressions = 8;
 }
 
 // The forecasted allocation and traffic metrics for a specific product
@@ -422,8 +422,8 @@ message PlannedProductForecast {
 // - Gender
 message OnTargetAudienceMetrics {
   // Reference audience size matching the considered targeting for YouTube.
-  optional int64 youtube_audience_size = 3;
+    int64 youtube_audience_size = 3;
 
   // Reference audience size matching the considered targeting for Census.
-  optional int64 census_audience_size = 4;
+    int64 census_audience_size = 4;
 }

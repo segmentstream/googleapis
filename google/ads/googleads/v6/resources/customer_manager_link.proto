@@ -50,10 +50,10 @@ message CustomerManagerLink {
   ];
 
   // Output only. The manager customer linked to the customer.
-  optional string manager_customer = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string manager_customer = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. ID of the customer-manager link. This field is read only.
-  optional int64 manager_link_id = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 manager_link_id = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Status of the link between the customer and the manager.
   google.ads.googleads.v6.enums.ManagerLinkStatusEnum.ManagerLinkStatus status = 5;

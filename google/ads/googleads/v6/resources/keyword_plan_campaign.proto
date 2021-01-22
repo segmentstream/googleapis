@@ -52,18 +52,18 @@ message KeywordPlanCampaign {
   ];
 
   // The keyword plan this campaign belongs to.
-  optional string keyword_plan = 9 [(google.api.resource_reference) = {
+    string keyword_plan = 9 [(google.api.resource_reference) = {
                                       type: "googleads.googleapis.com/KeywordPlan"
                                     }];
 
   // Output only. The ID of the Keyword Plan campaign.
-  optional int64 id = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 id = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // The name of the Keyword Plan campaign.
   //
   // This field is required and should not be empty when creating Keyword Plan
   // campaigns.
-  optional string name = 11;
+    string name = 11;
 
   // The languages targeted for the Keyword Plan campaign.
   // Max allowed: 1.
@@ -82,7 +82,7 @@ message KeywordPlanCampaign {
   //
   // This field is required and should not be empty when creating Keyword Plan
   // campaigns.
-  optional int64 cpc_bid_micros = 13;
+    int64 cpc_bid_micros = 13;
 
   // The geo targets.
   // Max number allowed: 20.
@@ -92,7 +92,7 @@ message KeywordPlanCampaign {
 // A geo target.
 message KeywordPlanGeoTarget {
   // Required. The resource name of the geo target.
-  optional string geo_target_constant = 2 [(google.api.resource_reference) = {
+    string geo_target_constant = 2 [(google.api.resource_reference) = {
                                              type: "googleads.googleapis.com/GeoTargetConstant"
                                            }];
 }

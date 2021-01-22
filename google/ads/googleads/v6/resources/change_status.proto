@@ -57,7 +57,7 @@ message ChangeStatus {
   ];
 
   // Output only. Time at which the most recent change has occurred on this resource.
-  optional string last_change_date_time = 24 [(google.api.field_behavior) = OUTPUT_ONLY];
+    string last_change_date_time = 24 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. Represents the type of the changed resource. This dictates what fields
   // will be set. For example, for AD_GROUP, campaign and ad_group fields will
@@ -65,7 +65,7 @@ message ChangeStatus {
   google.ads.googleads.v6.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The Campaign affected by this change.
-  optional string campaign = 17 [
+    string campaign = 17 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Campaign"
@@ -73,7 +73,7 @@ message ChangeStatus {
   ];
 
   // Output only. The AdGroup affected by this change.
-  optional string ad_group = 18 [
+    string ad_group = 18 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/AdGroup"
@@ -84,7 +84,7 @@ message ChangeStatus {
   google.ads.googleads.v6.enums.ChangeStatusOperationEnum.ChangeStatusOperation resource_status = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Output only. The AdGroupAd affected by this change.
-  optional string ad_group_ad = 25 [
+    string ad_group_ad = 25 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/AdGroupAd"
@@ -92,7 +92,7 @@ message ChangeStatus {
   ];
 
   // Output only. The AdGroupCriterion affected by this change.
-  optional string ad_group_criterion = 26 [
+    string ad_group_criterion = 26 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/AdGroupCriterion"
@@ -100,7 +100,7 @@ message ChangeStatus {
   ];
 
   // Output only. The CampaignCriterion affected by this change.
-  optional string campaign_criterion = 27 [
+    string campaign_criterion = 27 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/CampaignCriterion"
@@ -108,7 +108,7 @@ message ChangeStatus {
   ];
 
   // Output only. The Feed affected by this change.
-  optional string feed = 28 [
+    string feed = 28 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Feed"
@@ -116,7 +116,7 @@ message ChangeStatus {
   ];
 
   // Output only. The FeedItem affected by this change.
-  optional string feed_item = 29 [
+    string feed_item = 29 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/FeedItem"
@@ -124,7 +124,7 @@ message ChangeStatus {
   ];
 
   // Output only. The AdGroupFeed affected by this change.
-  optional string ad_group_feed = 30 [
+    string ad_group_feed = 30 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/AdGroupFeed"
@@ -132,7 +132,7 @@ message ChangeStatus {
   ];
 
   // Output only. The CampaignFeed affected by this change.
-  optional string campaign_feed = 31 [
+    string campaign_feed = 31 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/CampaignFeed"
@@ -140,7 +140,7 @@ message ChangeStatus {
   ];
 
   // Output only. The AdGroupBidModifier affected by this change.
-  optional string ad_group_bid_modifier = 32 [
+    string ad_group_bid_modifier = 32 [
     (google.api.field_behavior) = OUTPUT_ONLY,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/AdGroupBidModifier"

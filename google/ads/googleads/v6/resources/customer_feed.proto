@@ -53,7 +53,7 @@ message CustomerFeed {
   ];
 
   // Immutable. The feed being linked to the customer.
-  optional string feed = 6 [
+    string feed = 6 [
     (google.api.field_behavior) = IMMUTABLE,
     (google.api.resource_reference) = {
       type: "googleads.googleapis.com/Feed"

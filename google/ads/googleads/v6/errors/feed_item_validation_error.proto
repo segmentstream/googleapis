@@ -228,7 +228,7 @@ message FeedItemValidationErrorEnum {
     // Each option prefill in the message extension must be unique.
     DUPLICATE_OPTION_PREFILLS = 60;
 
-    // In message extensions, the number of optional labels and optional
+    // In message extensions, the number of   labels and  
     // prefills must be the same.
     UNEQUAL_LIST_LENGTHS = 61;
 

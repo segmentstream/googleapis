@@ -52,15 +52,15 @@ message KeywordPlanAdGroupKeyword {
   ];
 
   // The Keyword Plan ad group to which this keyword belongs.
-  optional string keyword_plan_ad_group = 8 [(google.api.resource_reference) = {
+    string keyword_plan_ad_group = 8 [(google.api.resource_reference) = {
                                                type: "googleads.googleapis.com/KeywordPlanAdGroup"
                                              }];
 
   // Output only. The ID of the Keyword Plan keyword.
-  optional int64 id = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
+    int64 id = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // The keyword text.
-  optional string text = 10;
+    string text = 10;
 
   // The keyword match type.
   google.ads.googleads.v6.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;
@@ -70,8 +70,8 @@ message KeywordPlanAdGroupKeyword {
   // the keyword plan ad group level.
   // Not applicable for negative keywords. (negative = true)
   // This field is Optional.
-  optional int64 cpc_bid_micros = 11;
+    int64 cpc_bid_micros = 11;
 
   // Immutable. If true, the keyword is negative.
-  optional bool negative = 12 [(google.api.field_behavior) = IMMUTABLE];
+    bool negative = 12 [(google.api.field_behavior) = IMMUTABLE];
 }

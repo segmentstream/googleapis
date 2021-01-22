@@ -53,7 +53,7 @@ message GenerateKeywordIdeasRequest {
 
   // The resource name of the language to target.
   // Required
-  optional string language = 14;
+    string language = 14;
 
   // The resource names of the location to target.
   // Max 10
@@ -101,7 +101,7 @@ message GenerateKeywordIdeasRequest {
 // Keyword And Url Seed
 message KeywordAndUrlSeed {
   // The URL to crawl in order to generate keyword ideas.
-  optional string url = 3;
+    string url = 3;
 
   // Requires at least one keyword.
   repeated string keywords = 4;
@@ -117,13 +117,13 @@ message KeywordSeed {
 message SiteSeed {
   // The domain name of the site. If the customer requesting the ideas doesn't
   // own the site provided only public information is returned.
-  optional string site = 2;
+    string site = 2;
 }
 
 // Url Seed
 message UrlSeed {
   // The URL to crawl in order to generate keyword ideas.
-  optional string url = 2;
+    string url = 2;
 }
 
 // Response message for [KeywordPlanIdeaService.GenerateKeywordIdeas][google.ads.googleads.v6.services.KeywordPlanIdeaService.GenerateKeywordIdeas].
@@ -147,7 +147,7 @@ message GenerateKeywordIdeaResult {
   // As in Keyword Plan historical metrics, this text may not be an actual
   // keyword, but the canonical form of multiple keywords.
   // See KeywordPlanKeywordHistoricalMetrics message in KeywordPlanService.
-  optional string text = 5;
+    string text = 5;
 
   // The historical metrics for the keyword
   google.ads.googleads.v6.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;
